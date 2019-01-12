@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>The geopython Community</title>
+
+		<meta name="description" content="The geopython Community">
+		<meta name="author" content="The geopython community">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<a href="https://geopython.github.io" title="geopython icon"><img src="https://www.gravatar.com/avatar/0cd33338517af73699fbdd3e5e53400b.png"></a>	
+					The geopython Community
+					<pre><code class="python" data-trim data-noescape>
+					>>> import geopython</code></pre>
+					<a href="https://geopython.github.io" title="The geopython Community">https://geopython.github.io</a>
+					<p><a href="LICENSE.txt" target="_new"><img src="img/cc.png"/><img src="img/by.png"/></a></p>
+				</section>
+				<section>
+					<h2>Credits</h2>
+					<p>
+						This presentation has been created with <br/>
+						<a target="_new" href="https://github.com/hakimel/reveal.js">Reveal.js</a> by <a href="https://github.com/hakimel">Hakim El Hattab</a><br/>
+						Create beautiful interactive slide decks using HTML.
+					</p>
+					<p>&nbsp;</p>
+					<p>Use left/right arrow keys. ESC for slides overview</p>
+					<p>
+						<a href="index.html?print-pdf">PDF Print</a> then File|Print... (Chrome only)
+					</p>
+				</section>
+				<section>
+					<h2>Outline</h2>
+					<ul>
+						<li>Why Python for Geospatial?</li>
+						<li>Projects</li>
+						<li>Standards Support</li>
+						<li>Community</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Why Python for Geospatial?</h2>
+					<ul>
+						<li>Availability</li>
+						<li>Ubiquitous</li>
+						<li>ecosystem of tools (PyPI, GitHub, etc.)</li>
+						<li>Can glue to C/C++ building blocks</li>
+						<li>Fast (enough)
+							<ul>
+								<li>Rapid development</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Projects</h2>
+						<ul>
+							<li>pycsw</li>
+							<li>PyWPS</li>
+							<li>OWSLib</li>
+							<li>GeoHealthCheck</li>
+							<li>GeoUsage</li>
+							<li>MetaSearch</li>
+							<li>Stetl</li>
+							<li>pygeoapi</li>
+							<li>pygeometa</li>
+						</ul>
+						<p>More projects available at <a href="https://github.com/geopython" title="geopython">GitHub</a></p>
+					</section>
+					<section>
+						<h2>Projects</h2>
+						<ul>
+							<li>GeoNode</li>
+							<li>pyproj</li>
+							<li>MapProxy</li>
+							<li>Fiona</li>
+							<li>Rasterio</li>
+							<li>Shapely</li>
+							<li>EOxServer</li>
+							<li>istSOS</li>
+							<li>MapScript</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					TODO: functional matrix
+					TODO: standards support matrix
+				</section>
+				<section>
+					<h2>Community</h2>
+					<ul>
+						<li><a href="https://github.com/geopython">GitHub</a></li>
+						<li><a href="https://gitter.im/geopython">Gitter</a></li>
+						<li><a href="https://mail.python.org/mm3/mailman3/lists/geopython@python.org/" title="mailing list">Mailing list</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			Reveal.configure({ slideNumber: true });
+		</script>
+	</body>
+</html>
