@@ -35,21 +35,9 @@
 					The geopython Community
 					<pre><code class="python" data-trim data-noescape>
 					>>> import geopython</code></pre>
-					<a href="https://geopython.github.io" title="The geopython Community">https://geopython.github.io</a>
+					<a href="https://geopython.github.io" title="The geopython Community">geopython.github.io</a>
 					<p><a href="LICENSE.txt" target="_new"><img src="img/cc.png"/><img src="img/by.png"/></a></p>
-				</section>
-				<section>
-					<h2>Credits</h2>
-					<p>
-						This presentation has been created with <br/>
-						<a target="_new" href="https://github.com/hakimel/reveal.js">Reveal.js</a> by <a href="https://github.com/hakimel">Hakim El Hattab</a><br/>
-						Create beautiful interactive slide decks using HTML.
-					</p>
-					<p>&nbsp;</p>
-					<p>Use left/right arrow keys. ESC for slides overview</p>
-					<p>
-						<a href="index.html?print-pdf">PDF Print</a> then File|Print... (Chrome only)
-					</p>
+					<p style="font-size: 20px;">This presentation available at <a href="https://geopython.github.io/presentation">geopython.github.io/presentation</a></p>
 				</section>
 				<section>
 					<h2>Outline</h2>
@@ -124,7 +112,7 @@
                             <tbody>
                             <tr>
                                 <td>pycsw</td>
-                                <td>CSW</td>
+                                <td>OGC API, CSW</td>
                                 <td>Publish/search/discover</td>
                                 <td>Server</td>
                             </tr>
@@ -136,25 +124,25 @@
                             </tr>
                             <tr>
                                 <td>OWSLib</td>
-                                <td>WMS/WFS/WPS/CSW</td>
+                                <td>OGC API, WxS</td>
                                 <td>Discover/visualize/access</td>
                                 <td>Client</td>
                             </tr>
                             <tr>
                                 <td>GeoHealthCheck</td>
-                                <td>WMS/WFS/WPS/CSW</td>
+                                <td>WxS</td>
                                 <td>Quality of service</td>
                                 <td>Client</td>
                             </tr>
                             <tr>
                                 <td>GeoUsage</td>
-                                <td>WMS/WFS/WPS/CSW</td>
+                                <td>WxS</td>
                                 <td>Service metrics/analysis</td>
                                 <td>Toolkit</td>
                             </tr>
                             <tr>
                                 <td>MetaSearch (QGIS)</td>
-                                <td>CSW</td>
+                                <td>OGC API, CSW</td>
                                 <td>Discover/visualize/access</td>
                                 <td>Client</td>
                             </tr>
@@ -166,13 +154,13 @@
                             </tr>
                             <tr>
                                 <td>pygeoapi</td>
-                                <td>OGC API</td>
-                                <td>Access</td>
+                                <td>OGC API, STAC</td>
+                                <td>Discovery/visualize/access/process</td>
                                 <td>Server</td>
                             </tr>
                             <tr>
                                 <td>pygeometa</td>
-                                <td>ISO 19115/19119, WMO</td>
+                                <td>ISO, OGC</td>
                                 <td>Metadata management</td>
                                 <td>Toolkit</td>
                             </tr>
@@ -196,11 +184,125 @@
 				<section>
 					<h2>Community</h2>
 					<ul>
-						<li><a href="https://github.com/geopython">GitHub</a></li>
-						<li><a href="https://gitter.im/geopython/Lobby">Gitter</a></li>
-						<li><a href="https://mail.python.org/mm3/mailman3/lists/geopython@python.org/" title="mailing list">Mailing list</a></li>
+						<li>GitHub: <a href="https://github.com/geopython">github.com/geopython</a></li>
+						<li>Gitter: <a href="https://gitter.im/geopython/Lobby">gitter.im/geopython/Lobby</a></li>
 					</ul>
 				</section>
+			<section id="pygeoapi">
+				<section>
+                                        <h1>pygeoapi</h1>
+                                        <h1 style="background-color: white"><img src="http://pygeoapi.io/presentations/default/static/pygeoapi-logo-notrans.png" width="300" style="vertical-align: middle;"/></h1>
+                                        <ul>
+                                                <li>Created by <a href="https://twitter.com/tomkralidis">Tom Kralidis</a> in 2018 on Valentine's Day with ❤️ </li>
+						<li>Geospatial data Web API framework via <a href="https://ogcapi.org">OGC API</a></li>
+						<li>International team (Canada, Netherlands, Greece, Italy, New Zealand, United States, Spain)</li>
+                                                <li><a href="https://www.osgeo.org/projects/pygeoapi/">OSGeo Project</a></li>
+                                                <li>OGC Reference Implementation</li>
+                                        </ul>
+				</section>
+                                <section>
+                                        <h1>Install in 5 minutes</h1>
+                                <pre><code data-trim>
+python3 -m venv pygeoapi
+cd pygeoapi
+. bin/activate
+git clone https://github.com/geopython/pygeoapi.git
+cd pygeoapi
+pip3 install -r requirements.txt
+python3 setup.py install
+cp pygeoapi-config.yml example-config.yml
+vi example-config.yml  # edit as required
+export PYGEOAPI_CONFIG=example-config.yml
+export PYGEOAPI_OPENAPI=example-openapi.yml
+pygeoapi openapi generate $PYGEOAPI_CONFIG --output-file $PYGEOAPI_OPENAPI
+pygeoapi serve
+# in another terminal
+curl http://localhost:5000  # or open in a web browser
+                                </pre></code>
+                                </section>
+				<section>
+					<h1>Technical Overview</h1>
+					<ul>
+						<li>Core abstract API; web framework agnostic (default Flask)</li>
+						<li>YAML configuration (metadata, dataset connections</li>
+						<li>Automated OpenAPI document generation (data binding)</li>
+						<li>Robust plugin framework (data connections, formats, processing)</li>
+						<li>Easy deployment (pip3 install, Docker, conda, UbuntuGIS)</li>
+						<li>Minimal dependencies</li>
+					</ul>
+				</section>
+			</section>
+			<section id="pycsw">
+	            <section>
+	            <a class="image" href="https://pycsw.org" target="_blank">
+		                <img alt="pycsw" style="background: white;" src="https://pycsw.org/img/pycsw-logo-horizontal.png">
+		                <ul>
+		                    <li><a href="https://pycsw.org">pycsw</a> is an OGC API - Records and OGC CSW server implementation written in Python</li>
+		                    <li>Open Source project released under the MIT license</li>
+		                    <li>Runs on all major platforms (Windows, Linux, Mac OS X)</li>
+		                    <li>OSGeo Project since 11 March 2015</li>
+		                </ul>
+		            </section>
+
+			<section>
+		            </a>
+		                <h2>Introduction</h2>
+		                <ul>
+		                <li>pycsw fully implements the OpenGIS Catalogue Service Implementation Specification [Catalogue Service for the Web]</li>
+		                <li>pycsw also implements OGC API - Records, CQL, OpenSearch, OAI-PMH, SRU, STAC</li>
+		                <li>pycsw allows for the publishing and discovery of geospatial metadata</li>
+		                </ul>
+		            </section>
+				<section>
+		                <h2>Introduction</h2>
+		                <p>
+		                    The project is certified <a href="https://www.opengeospatial.org/resource/products/details/?pid=1104">OGC Compliant</a>, and is an OGC Reference Implementation for both CSW 2.0.2 and <a href="https://www.opengeospatial.org/pressroom/pressreleases/2445">3.0.0</a>
+		                </p>
+		                <p>
+                                    Aiming OGC API - Records Reference Implementation
+		                </p>
+		                <p>
+		                <a title="This product conforms to the OpenGIS Catalogue Service Implementation Specification [Catalogue Service for the Web], Revision 2.0.2. OGC, OGC®, and CERTIFIED OGC COMPLIANT are trademarks or registered trademarks of the Open Geospatial Consortium, Inc. in the United States and other countries." href="https://www.opengeospatial.org/resource/products/details/?pid=1104"><img alt="This product conforms to the OpenGIS Catalogue Service Implementation Specification [Catalogue Service for the Web], Revision 2.0.2. OGC, OGC®, and CERTIFIED OGC COMPLIANT are trademarks or registered trademarks of the Open Geospatial Consortium, Inc. in the United States and other countries." src="https://portal.opengeospatial.org/public_ogc/compliance/Certified_OGC_Compliant_Logo_Web.gif" height="74"/></a>
+		                </p>
+		                <p>
+		                <a title="This product conforms to the OpenGIS Catalogue Service Implementation Specification [Catalogue Service for the Web], Revision 3.0.0. OGC, OGC®, and CERTIFIED OGC COMPLIANT are trademarks or registered trademarks of the Open Geospatial Consortium, Inc. in the United States and other countries." href="https://www.opengeospatial.org/resource/products/details/?pid=1104"><img alt="This product conforms to the OpenGIS Catalogue Service Implementation Specification [Catalogue Service for the Web], Revision 3.0.0. OGC, OGC®, and CERTIFIED OGC COMPLIANT are trademarks or registered trademarks of the Open Geospatial Consortium, Inc. in the United States and other countries." src="https://portal.opengeospatial.org/public_ogc/compliance/badge.php?s=CAT%20CSW%203.0.0&r=1" height="38"/></a>
+		                </p>
+		                <p>
+		                <a title="This product conforms to the OpenGIS Catalogue Service Implementation Specification [Catalogue Service for the Web], Revision 2.0.2. OGC, OGC®, and CERTIFIED OGC COMPLIANT are trademarks or registered trademarks of the Open Geospatial Consortium, Inc. in the United States and other countries." href="https://www.opengeospatial.org/resource/products/details/?pid=1104"><img alt="This product conforms to the OpenGIS Catalogue Service Implementation Specification [Catalogue Service for the Web], Revision 2.0.2. OGC, OGC®, and CERTIFIED OGC COMPLIANT are trademarks or registered trademarks of the Open Geospatial Consortium, Inc. in the United States and other countries." src="https://portal.opengeospatial.org/public_ogc/compliance/badge.php?s=CAT%20CSW%202.0.2&r=1" height="38"/></a>
+		                </p>
+		                <p>
+		                pycsw is an official OSGeo Project
+		                </p>
+		                <p>
+		                <a title="OSGeo Project" href="https://github.com/geopython/pycsw/wiki/OSGeo-Incubation"><img alt="OSGeo Project" src="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/project/OSGeo_project.png" height="64" style="background: white;"/></a>
+		                </p>
+		            </section>
+			</section>
+			<section id="pygeometa">
+				<section>
+					<h1>pygeometa</h1>
+					<ul>
+						<li>Created by Tom Kralidis in 2009</li>
+						<li>Originally named “pygdm” as part of larger internal geospatial data management workflow at Environment Canada</li>
+						<li>Pulled out as a standalone project (pygeometa) in 2014</li>
+						<li>Published to GitHub in 2015</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<li>Original focus on static discovery metadata for ISO 19115</li>
+						<li>Increased focus on automated workflow and run-time pipelines</li>
+						<li>CLI or Python API</li>
+						<li>Support additional formats</li>
+						<li>Multilingual support</li>
+						<li>Support for ‘base’ MCF reuse (i.e. contacts)</li>
+						<li>Schema validation (new!)</li>
+						<li>Extensible</li>
+						<li>allows for additional properties</li>
+						<li>add your own Metadata Formats!!</li>
+					</ul>
+				</section>
+			</section>
 			</div>
 		</div>
 
@@ -212,6 +314,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+                                history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
