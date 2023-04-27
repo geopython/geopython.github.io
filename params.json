@@ -1,7 +1,7 @@
 {
   "name": "geopython.github.io",
   "tagline": "",
-  "body": "### geopython\r\n\r\n![geopython](http://www.gravatar.com/avatar/0cd33338517af73699fbdd3e5e53400b.png)geopython is a GitHub organization comprised of [Python](http://python.org/) projects related to geospatial.\r\n\r\n* [OWSLib] (OWSLib)\r\n* [pycsw] (http://pycsw.org/)\r\n* [PyWPS] (http://pywps.wald.intevation.org/)\r\n* [MetaSearch] (MetaSearch)\r\n* [CadTools] (http://plugins.qgis.org/plugins/cadtools/)\r\n\r\nAlso join us in [irc://freenode.net/#geopython](irc://freenode.net/#geopython) or the [mailing list](https://mail.python.org/mm3/mailman3/lists/geopython@python.org/).\r\n\r\nFor more geospatial projects, check out the [Toblerity Project](http://toblerity.github.com/).",
+  "body": "### geopython\r\n\r\n![geopython](http://www.gravatar.com/avatar/0cd33338517af73699fbdd3e5e53400b.png)geopython is a GitHub organization comprised of [Python](http://python.org/) projects related to geospatial.\r\n\r\n* [https://owslib.readthedocs.io] (OWSLib)\r\n* [pycsw] (http://pycsw.org/)\r\n* [PyWPS] (http://pywps.wald.intevation.org/)\r\n* [MetaSearch] (MetaSearch)\r\n* [CadTools] (http://plugins.qgis.org/plugins/cadtools/)\r\n\r\nAlso join us in [irc://freenode.net/#geopython](irc://freenode.net/#geopython) or the [mailing list](https://mail.python.org/mm3/mailman3/lists/geopython@python.org/).\r\n\r\nFor more geospatial projects, check out the [Toblerity Project](http://toblerity.github.com/).",
   "google": "",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
